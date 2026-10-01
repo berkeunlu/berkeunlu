@@ -1,0 +1,110 @@
+# Delete any item you don't want. icon = simple-icons slug, logo = PNG in assets/logos, color = badge hex.
+# A category `color` is the default for its items without their own.
+categories:
+  - title: Robotics
+    color: "22314E"
+    items:
+      - {name: ROS 2, icon: ros}
+      - {name: ROS 1, icon: ros}
+      - {name: MoveIt 2, logo: moveit, color: "0B2A5B"}
+      - {name: Nav2, logo: nav2, color: "1F6FAF"}
+      - {name: ros2_control, icon: ros}
+      - {name: TF2 / URDF, icon: ros}
+      - {name: micro-ROS, icon: ros}
+      - {name: Foxglove, logo: foxglove, color: "6F3AF0"}
+      - {name: Behavior Trees}
+      - {name: State machines}
+      - {name: SLAM}
+      - {name: Autonomous docking}
+      - {name: Kinematics & IK}
+
+  - title: Hardware & control
+    color: "546E7A"
+    items:
+      - {name: Sensor drivers}
+      - {name: Hardware interfaces}
+      - {name: PID control}
+      - {name: Modbus}
+      - {name: CAN / CANopen}
+      - {name: EtherCAT}
+      - {name: Serial / UART}
+      - {name: TCP / UDP}
+
+  - title: Simulation
+    color: "455A64"
+    items:
+      - {name: Gazebo, logo: gazebo, color: "F58113"}
+      - {name: Isaac Sim, logo: isaac, color: "76B900"}
+      - {name: CoppeliaSim, logo: coppeliasim, color: "C62828"}
+      - {name: Webots, logo: webots, color: "A31515"}
+      - {name: MuJoCo}
+      - {name: Digital twins}
+
+  - title: Sensors & actuators
+    color: "00796B"
+    items:
+      - {name: LiDAR}
+      - {name: Depth cameras}
+      - {name: RGB cameras}
+      - {name: Laser profilers}
+      - {name: Proximity sensors}
+      - {name: IMU}
+      - {name: Force / torque}
+      - {name: Servos & steppers}
+      - {name: Grippers}
+
+  - title: Perception
+    color: "5E548E"
+    items:
+      - {name: Point clouds}
+      - {name: OpenCV, icon: opencv, color: "5C3EE8"}
+      - {name: Open3D, icon: open3d, color: "3C8DBC"}
+      - {name: Hand-eye calibration}
+      - {name: ArUco}
+      - {name: ICP}
+
+  - title: AI / LLMs
+    color: "A0522D"
+    items:
+      - {name: Claude, icon: anthropic, color: "D97757"}
+      - {name: Claude Code, icon: anthropic, color: "D97757"}
+      - {name: PyTorch, icon: pytorch, color: "EE4C2C"}
+      - {name: Prompt engineering}
+      - {name: Agents & MCP}
+      - {name: Context engineering}
+      - {name: Deep learning}
+      - {name: Deep RL}
+
+  - title: Linux & shell
+    color: "4A5568"
+    items:
+      - {name: Linux, icon: linux, color: "FCC624"}
+      - {name: Ubuntu, icon: ubuntu, color: "E95420"}
+      - {name: Bash, icon: gnubash, color: "4EAA25"}
+      - {name: tmux, icon: tmux, color: "1BB91F"}
+      - {name: gdb, icon: gnu, color: "A42E2B"}
+      - {name: systemd}
+      - {name: SSH}
+
+  - title: Languages
+    color: "2D3748"
+    items:
+      - {name: C++, icon: cplusplus, color: "00599C"}
+      - {name: Python, icon: python, color: "3776AB"}
+      - {name: C, icon: c, color: "A8B9CC"}
+      - {name: TypeScript, icon: typescript, color: "3178C6"}
+      - {name: JavaScript, icon: javascript, color: "F7DF1E"}
+      - {name: C#, icon: csharp, color: "512BD4"}
+      - {name: Java, icon: openjdk, color: "ED8B00"}
+      - {name: Lua, icon: lua, color: "2C2D72"}
+      - {name: CMake, icon: cmake, color: "064F8C"}
+      - {name: MATLAB}
+
+  - title: Tools
+    color: "4A5568"
+    items:
+      - {name: Git, icon: git, color: "F05032"}
+      - {name: GitHub Actions, icon: githubactions, color: "2088FF"}
+      - {name: Docker, icon: docker, color: "2496ED"}
+      - {name: VS Code, icon: visualstudiocode, color: "007ACC"}
+      - {name: colcon}
