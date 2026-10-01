@@ -45,6 +45,7 @@ query($from: DateTime!, $to: DateTime!) {
       restrictedContributionsCount
       commitContributionsByRepository(maxRepositories: 100) {
         repository { nameWithOwner isFork %s }
+        contributions { totalCount }
       }
     }
   }
@@ -75,6 +76,7 @@ def main():
 
     totals = dict(commits=0, prs=0, reviews=0, issues=0)
     repos = {}
+    commits = {}
     for year in range(first_year, now.year + 1):
         f, t = year_window(year, now)
         c = gql(YEAR_Q, **{"from": f, "to": t})["viewer"]["contributionsCollection"]
@@ -85,6 +87,7 @@ def main():
         for item in c["commitContributionsByRepository"]:
             r = item["repository"]
             repos[r["nameWithOwner"]] = r
+            commits[r["nameWithOwner"]] = commits.get(r["nameWithOwner"], 0) + item["contributions"]["totalCount"]
 
     after = None
     while True:
@@ -96,15 +99,16 @@ def main():
         after = page["pageInfo"]["endCursor"]
 
     langs = {}
-    for r in repos.values():
+    for name, r in repos.items():
         if r.get("isFork"):
             continue
-        for e in r["languages"]["edges"]:
+        edges = [e for e in r["languages"]["edges"] if e["node"]["name"] not in IGNORE_LANGS]
+        repo_bytes = sum(e["size"] for e in edges) or 1
+        weight = commits.get(name, 1)
+        for e in edges:
             n = e["node"]["name"]
-            if n in IGNORE_LANGS:
-                continue
-            size, color = langs.get(n, (0, e["node"]["color"] or "#888"))
-            langs[n] = (size + e["size"], color)
+            share, color = langs.get(n, (0.0, e["node"]["color"] or "#888"))
+            langs[n] = (share + weight * e["size"] / repo_bytes, color)
 
     ranked = sorted(langs.items(), key=lambda kv: -kv[1][0])[:TOP_LANGS]
     total_bytes = sum(s for _, (s, _) in ranked) or 1

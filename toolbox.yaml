@@ -11,7 +11,6 @@ categories:
       - {name: ros2_control, icon: ros}
       - {name: TF2 / URDF, icon: ros}
       - {name: micro-ROS, icon: ros}
-      - {name: Foxglove, logo: foxglove, color: "6F3AF0"}
       - {name: Behavior Trees}
       - {name: State machines}
       - {name: SLAM}
@@ -33,12 +32,12 @@ categories:
   - title: Simulation
     color: "455A64"
     items:
-      - {name: Gazebo, logo: gazebo, color: "F58113"}
-      - {name: Isaac Sim, logo: isaac, color: "76B900"}
+      - {name: Gazebo Classic, logo: gazebo, color: "B85C00"}
+      - {name: Gazebo Ignition, logo: gazebo, color: "F58113"}
+      - {name: Isaac Sim, icon: nvidia, color: "76B900"}
       - {name: CoppeliaSim, logo: coppeliasim, color: "C62828"}
       - {name: Webots, logo: webots, color: "A31515"}
       - {name: MuJoCo}
-      - {name: Digital twins}
 
   - title: Sensors & actuators
     color: "00796B"
@@ -51,7 +50,6 @@ categories:
       - {name: IMU}
       - {name: Force / torque}
       - {name: Servos & steppers}
-      - {name: Grippers}
 
   - title: Perception
     color: "5E548E"
@@ -82,7 +80,6 @@ categories:
       - {name: Ubuntu, icon: ubuntu, color: "E95420"}
       - {name: Bash, icon: gnubash, color: "4EAA25"}
       - {name: tmux, icon: tmux, color: "1BB91F"}
-      - {name: gdb, icon: gnu, color: "A42E2B"}
       - {name: systemd}
       - {name: SSH}
 
@@ -92,7 +89,6 @@ categories:
       - {name: C++, icon: cplusplus, color: "00599C"}
       - {name: Python, icon: python, color: "3776AB"}
       - {name: C, icon: c, color: "A8B9CC"}
-      - {name: TypeScript, icon: typescript, color: "3178C6"}
       - {name: JavaScript, icon: javascript, color: "F7DF1E"}
       - {name: C#, icon: csharp, color: "512BD4"}
       - {name: Java, icon: openjdk, color: "ED8B00"}
